@@ -10,7 +10,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={Logo} alt='img' />
+        <img src={Logo} alt='img' className="img" />
       </div>
       <ul className="nav-menu">
         <li onClick={() => { setMenu("Home") }}>
@@ -22,7 +22,7 @@ const NavBar = () => {
           >
             Home
           </Button>
-          {menu === 'Home' ? <hr /> : null}
+          {menu === 'Home' ? <hr className="hr-line" /> : null}
         </li>
         <li onClick={() => { setMenu("About Me") }}>
           <Button
@@ -33,7 +33,7 @@ const NavBar = () => {
           >
             About Me
           </Button>
-          {menu === 'About Me' ? <hr /> : null}
+          {menu === 'About Me' ? <hr className="hr-line" /> : null}
         </li>
         <li onClick={() => { setMenu("Contact Me") }}>
           <Button
@@ -44,7 +44,7 @@ const NavBar = () => {
           >
             Contact Me
           </Button>
-          {menu === 'Contact Me' ? <hr /> : null}
+          {menu === 'Contact Me' ? <hr className="hr-line" /> : null}
         </li>
         <li onClick={() => { setMenu("Experience") }}>
           <Button
@@ -55,7 +55,7 @@ const NavBar = () => {
           >
             Experience
           </Button>
-          {menu === 'Experience' ? <hr /> : null}
+          {menu === 'Experience' ? <hr className="hr-line" /> : null}
         </li>
       </ul>
     </div>
@@ -63,4 +63,3 @@ const NavBar = () => {
 }
 
 export default NavBar;
-

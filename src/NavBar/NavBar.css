@@ -1,49 +1,59 @@
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    padding: 16px;
-    box-shadow: 0 1px 3px -2px black;
-    background-color: #171717;
-    height: 50px;
-    margin-left: 0px;
-}
-.img {
-    padding-top: 15px;
-    width: 80%;
-    height:25px ;
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+  background-color: #171717;
+  height: 50px;
 }
 
-.nav-logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 20px;
+.navbar .img {
+  padding-top: 15px;
+  width: 100%;
+  height: 225px;
 }
-.nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 50px;
-    color: #626262;
-    font-size: 20px;
-    font-weight: 500;
+
+.navbar .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
 }
-#but1, #but2, #but3, #but4 {
-    color: gray;
-    font-size: large;
-    cursor: pointer;
+
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 500;
 }
-  
-.active {
-    color: white !important;
+
+.navbar #but1, .navbar #but2, .navbar #but3, .navbar #but4 {
+  color: gray;
+  font-size: large;
+  cursor: pointer;
 }
-#but1:hover,#but2:hover,#but3:hover,#but4:hover {
-    color: white !important;
+
+.navbar .active {
+  color: white !important;
 }
-.nav-menu hr{
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background: #ff4141;
+
+.navbar #but1:hover, .navbar #but2:hover, .navbar #but3:hover, .navbar #but4:hover {
+  color: white !important;
+}
+
+.navbar .hr-line {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #FFBD59;
+}
+
+@media (max-width: 600px) {
+  .navbar .nav-menu {
+    display: none;
+  }
 }

@@ -1,0 +1,193 @@
+.hero-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+  background-color:black;
+  padding: 50px 0px; /* Reduce left and right padding */
+  flex-wrap: wrap;
+}
+
+.hero {
+  width: 50%;
+  height: auto;
+  background-image: linear-gradient(to bottom right, rgb(56, 55, 55), rgb(27, 25, 25), #171717, black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid rgb(86, 85, 85);
+  border-radius: 25px;
+  margin-bottom: 15px;
+  padding: 20px 10px; /* Reduce left and right padding */
+}
+
+.heroimg {
+  margin-top: 20px;
+}
+
+#myphoto {
+  border: 1px solid rgb(86, 85, 85);
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+
+.herotext {
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#name {
+  text-shadow: 2px 2px rgb(25, 24, 24);
+  font-family: "Playwrite US Trad", cursive;
+  font-optical-sizing: auto;
+}
+
+#desig {
+  font-family: "Playwrite US Trad", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  color: silver;
+}
+
+/* Media Queries for different screen sizes */
+
+@media (min-width: 600px) {
+  .hero {
+    width: 28%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-element {
+    flex-direction: row;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 10px; /* Reduce left and right padding */
+    width: 25%;
+    height: auto;
+  }
+
+  .heroimg {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+
+  .herotext {
+    margin-left: 30px;
+    margin-top: 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    width: 650px;
+    height: 280px;
+  }
+
+  #myphoto {
+    width: 200px;
+    height: 230px;
+  }
+}
+.hero2{
+  width: 50%;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  padding-top: 0px;
+}
+.marquee-box{
+  width:100%;
+  height:50px;
+  color: white;
+  background-image: linear-gradient(to bottom right, rgb(56, 55, 55), rgb(27, 25, 25), #171717, black);
+  border: 1px solid rgb(86, 85, 85);
+  border-radius: 25px;
+}
+
+@media (min-width: 1024px) {
+  .hero2 {
+    width: 650px;
+    height: 300px;
+  }
+}
+.marquee{
+  padding-top: 7px;
+  color: whitesmoke;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 20s linear infinite;
+}
+#text{
+  padding-top: 2px;
+  text-shadow: 2px 2px rgb(25, 24, 24);
+  font-family: "Playwrite US Trad", cursive;
+  font-optical-sizing: auto;
+  font-size: x-large;
+}
+#button{
+  padding-top: 2px;
+  height: 25px;
+  width: 25px;
+}
+#next{
+  height: 75px;
+  width: 75px;
+}
+.link-button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-button img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%; 
+}
+
+.link-button:hover img {
+  transform: scale(1.1) rotate(-45deg);
+  box-shadow: 0 0 0 3px white;
+}
+
+@keyframes tiltBack {
+  0% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(0deg);
+  }
+}
+
+.link-button img:hover {
+  animation: tiltBack 0.5s forwards; 
+}
+.nextbutton{
+  margin-left: 300px;
+  width: 85px;
+  height: 85px;
+  margin-bottom: 10px;
+}
