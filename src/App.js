@@ -3,7 +3,6 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import ContactMe from "./Pages/ContactMe";
 import Experience from "./Pages/Experience";
-
 function App() {
   return (
     <div className="App">

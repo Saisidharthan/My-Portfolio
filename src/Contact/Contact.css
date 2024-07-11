@@ -1,0 +1,283 @@
+/* Base styles */
+.Contact-main {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Contact-0 {
+  margin-top: 75px;
+  width: 30%;
+  height: 750px;
+  background-color: black;
+  margin-left: 125px;
+}
+
+.Contact-0 h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Contact-0-1 {
+  display: flex;
+  align-items: center;
+}
+
+.cont-img {
+  background-color: black;
+  width: 68px;
+  height: 68px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-img img {
+  background-color: #f1f1f1;
+  width: 50px;
+  height: 50px;
+}
+
+.cont-content {
+  width: 250px;
+  height: 80px;
+  margin-left: 15px;
+}
+
+.cont-content h3 {
+  font-size: 20px;
+  color: gray;
+  font-family: "Playwrite US Trad", cursive;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.cont-content h1 {
+  font-size: 20px;
+  color: #f1f1f1;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 2rem;
+  width: 400px;
+  height: 100px;
+}
+
+.con-icon {
+  width: 4.625rem;
+  height: 4.625rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+}
+
+.con-icon:hover > .icon-style {
+  scale: 1.2;
+  color: black;
+}
+
+.con-icon:before {
+  background: #f1f1f1;
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  left: -110%;
+  top: 80%;
+  transform: rotate(45deg);
+}
+
+.con-icon:hover:before {
+  animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+  50% {
+    left: 10%;
+    top: -40%;
+  }
+  100% {
+    left: -15%;
+    top: -15%;
+  }
+}
+
+.icon-style {
+  font-size: 2rem;
+  color: white;
+}
+
+.Contact-1 {
+  justify-content: center;
+  width: 60%;
+  background-image: linear-gradient(to bottom right, rgb(56, 55, 55), rgb(27, 25, 25), #171717, black);
+  height: 250px;
+  margin-top: 90px;
+  border-radius: 30px;
+}
+
+.Contact-1 h1 {
+  font-size: 90px;
+  color: white;
+  margin-left: 25px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-1-high {
+  font-size: 90px;
+  color: #FFBD59;
+}
+
+.Contact-1 button {
+  width: 250px;
+  height: 50px;
+  margin-left: 25px;
+  color: white;
+  background-color: rgb(43, 47, 52);
+  font-size: 15px;
+  border-radius: 25px;
+  border: 1px solid white;
+}
+
+.Contact-1 button:hover {
+  border: 2px solid #FFBD59;
+  color: #FFBD59;
+}
+
+/* Responsive styles for all sizes */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .Contact-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Contact-0 {
+    width: 90%;
+    margin-left: 0;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .Contact-0-1 {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .cont-img {
+    margin-bottom: 10px;
+  }
+
+  .cont-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-icons {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .Contact-1 {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .Contact-1 h1 {
+    font-size: 40px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .contact-1-high {
+    font-size: 40px;
+  }
+
+  .Contact-1 button {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Medium devices (tablets, 600px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .Contact-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Contact-0 {
+    width: 80%;
+    margin-left: 0;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .Contact-0-1 {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .cont-img {
+    margin-bottom: 10px;
+  }
+
+  .cont-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-icons {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .Contact-1 {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .Contact-1 h1 {
+    font-size: 60px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .contact-1-high {
+    font-size: 60px;
+  }
+
+  .Contact-1 button {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Large devices (desktops, 1025px and up) */
+@media (min-width: 1025px) {
+  /* No changes needed for larger screens, styles remain the same */
+}

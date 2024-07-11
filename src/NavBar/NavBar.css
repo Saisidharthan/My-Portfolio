@@ -30,7 +30,7 @@
   font-weight: 500;
 }
 
-.navbar #but1, .navbar #but2, .navbar #but3, .navbar #but4 {
+.navbar #but1, .navbar #but2, .navbar #but3, .navbar #but4, .navbar #but5 {
   color: gray;
   font-size: large;
   cursor: pointer;
@@ -40,7 +40,7 @@
   color: white !important;
 }
 
-.navbar #but1:hover, .navbar #but2:hover, .navbar #but3:hover, .navbar #but4:hover {
+.navbar #but1:hover, .navbar #but2:hover, .navbar #but3:hover, .navbar #but4:hover, .navbar #but5:hover {
   color: white !important;
 }
 

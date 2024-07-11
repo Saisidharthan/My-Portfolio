@@ -1,16 +1,13 @@
 import React from 'react'
 import NavBar from '../NavBar/NavBar'
 import Footer from '../Footer/Footer'
-import Abouthero from '../About-hero/Abouthero'
-const About = () => {
+const Projects = () => {
   return (
     <div>
         <NavBar/>
-        <Abouthero/>
         <Footer/>
-
     </div>
   )
 }
 
-export default About
+export default Projects

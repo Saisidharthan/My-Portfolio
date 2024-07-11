@@ -46,17 +46,6 @@ const NavBar = () => {
           </Button>
           {menu === 'Contact Me' ? <hr className="hr-line" /> : null}
         </li>
-        <li onClick={() => { setMenu("Experience") }}>
-          <Button
-            component={Link}
-            to="/Experience"
-            id='but4'
-            className={menu === 'Experience' ? 'active' : ''}
-          >
-            Experience
-          </Button>
-          {menu === 'Experience' ? <hr className="hr-line" /> : null}
-        </li>
       </ul>
     </div>
   );

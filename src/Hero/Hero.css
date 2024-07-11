@@ -1,3 +1,34 @@
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.full-content{
+  background-color: black;
+  gap: 50px;
+}
+.hero,
+.marquee-box,
+.about,
+.project,
+.newsletter,
+.github,
+.linkedin{
+  animation: appear 1s linear;
+}
+.newsletter,
+.github,
+.linkedin {
+  animation: appear 4s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
 .hero-element {
   display: flex;
   flex-direction: row;
@@ -5,13 +36,13 @@
   justify-content: center;
   width: 100%;
   gap: 40px;
-  background-color:black;
-  padding: 50px 0px; /* Reduce left and right padding */
+  background-color: black;
+  padding: 120px 0 0 0;
   flex-wrap: wrap;
 }
 
 .hero {
-  width: 50%;
+  width: 100%;
   height: auto;
   background-image: linear-gradient(to bottom right, rgb(56, 55, 55), rgb(27, 25, 25), #171717, black);
   display: flex;
@@ -21,11 +52,20 @@
   border: 1px solid rgb(86, 85, 85);
   border-radius: 25px;
   margin-bottom: 15px;
-  padding: 20px 10px; /* Reduce left and right padding */
+  padding: 20px 10px;
+  cursor: pointer;
+}
+
+.hero:hover {
+  box-shadow: 0 0 5px 0.5px rgb(152, 149, 149);
 }
 
 .heroimg {
   margin-top: 20px;
+}
+
+.heroimg:hover {
+  box-shadow: 0 0 5px 3px white;
 }
 
 #myphoto {
@@ -46,34 +86,30 @@
 #name {
   text-shadow: 2px 2px rgb(25, 24, 24);
   font-family: "Playwrite US Trad", cursive;
-  font-optical-sizing: auto;
 }
 
 #desig {
   font-family: "Playwrite US Trad", cursive;
-  font-optical-sizing: auto;
   font-weight: 100;
-  font-style: normal;
   color: silver;
 }
 
-/* Media Queries for different screen sizes */
-
 @media (min-width: 600px) {
   .hero {
-    width: 28%;
+    width: 45%;
   }
 }
 
 @media (min-width: 768px) {
-  .hero-element {
+  .hero-element,
+  .hero-element-02 {
     flex-direction: row;
   }
 
   .hero {
     flex-direction: row;
     align-items: flex-start;
-    padding: 20px 10px; /* Reduce left and right padding */
+    padding: 20px 10px;
     width: 25%;
     height: auto;
   }
@@ -92,7 +128,7 @@
 
 @media (min-width: 1024px) {
   .hero {
-    width: 650px;
+    width: 620px;
     height: 280px;
   }
 
@@ -101,22 +137,27 @@
     height: 230px;
   }
 }
-.hero2{
+
+.hero2 {
   width: 50%;
   height: auto;
   background-color: transparent;
-  display: flex;
-  flex-direction: row;
   gap: 13px;
   padding-top: 0px;
 }
-.marquee-box{
-  width:100%;
-  height:50px;
+
+.marquee-box {
+  width: 100%;
+  height: 50px;
   color: white;
   background-image: linear-gradient(to bottom right, rgb(56, 55, 55), rgb(27, 25, 25), #171717, black);
   border: 1px solid rgb(86, 85, 85);
   border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+.marquee-box:hover {
+  box-shadow: 0 0 5px 0.5px rgb(152, 149, 149);
 }
 
 @media (min-width: 1024px) {
@@ -125,33 +166,31 @@
     height: 300px;
   }
 }
-.marquee{
+
+.marquee {
   padding-top: 7px;
   color: whitesmoke;
   white-space: nowrap;
   overflow: hidden;
   animation: marquee 20s linear infinite;
 }
-#text{
+
+#text {
   padding-top: 2px;
   text-shadow: 2px 2px rgb(25, 24, 24);
   font-family: "Playwrite US Trad", cursive;
-  font-optical-sizing: auto;
   font-size: x-large;
 }
-#button{
+
+#button {
   padding-top: 2px;
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 }
-#next{
-  height: 75px;
-  width: 75px;
-}
-.link-button {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
+
+#next {
+  height: 50px;
+  width: 50px;
 }
 
 .link-button {
@@ -162,32 +201,433 @@
 
 .link-button img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .link-button:hover img {
   transform: scale(1.1) rotate(-45deg);
-  box-shadow: 0 0 0 3px white;
 }
 
 @keyframes tiltBack {
   0% {
-    transform: scale(1.1) rotate(-45deg);
+    transform: scale(1.1) rotate(0deg);
   }
   50% {
-    transform: scale(1.1) rotate(-45deg);
+    transform: scale(1.1) rotate(180deg);
   }
   100% {
-    transform: scale(1.1) rotate(0deg);
+    transform: scale(1.1) rotate(360deg);
   }
 }
 
 .link-button img:hover {
-  animation: tiltBack 0.5s forwards; 
+  animation: tiltBack 0.5s forwards;
 }
-.nextbutton{
+
+.nextbutton {
   margin-left: 300px;
   width: 85px;
   height: 85px;
   margin-bottom: 10px;
+}
+
+.about-project-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+}
+
+.about,
+.project {
+  width: 100%;
+  background-image: linear-gradient(to bottom right, rgb(56, 55, 55), rgb(27, 25, 25), #171717, black);
+  border: 1px solid rgb(86, 85, 85);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 15px;
+}
+
+.about:hover,
+.project:hover {
+  box-shadow: 0 0 5px 0.5px rgb(152, 149, 149);
+  cursor: pointer;
+}
+
+#aboutimg,
+#projectimg {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  height: 100px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.about-content-container,
+.project-content-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-content,
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text,
+.project-text {
+  color: white;
+}
+
+#about-text-01,
+#project-text-01 {
+  font-family: "Playwrite US Trad", cursive;
+  font-weight: 50;
+  color: silver;
+}
+
+#about-text-02,
+#project-text-02 {
+  color: white;
+  font-family: "Playwrite US Trad", cursive;
+  font-size: 20px;
+}
+
+.aboutbutton,
+.projectbutton {
+  width: auto;
+}
+
+.aboutbutton img,
+.projectbutton img {
+  margin-left: 5px;
+  margin-top: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.about-button,
+.project-button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-button img,
+.project-button img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-button:hover img,
+.project-button:hover img {
+  transform: scale(1.1) rotate(-45deg);
+}
+
+.about-button img:hover,
+.project-button img:hover {
+  animation: tiltBack 0.5s forwards;
+}
+
+/* Newsletter Section */
+.newsletter {
+  width: 100%;
+  background-image: linear-gradient(to bottom right, rgb(56, 55, 55), rgb(27, 25, 25), #171717, black);
+  border: 1px solid rgb(86, 85, 85);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 14px;
+}
+
+.newsletter:hover {
+  box-shadow: 0 0 5px 0.5px rgb(152, 149, 149);
+}
+
+#newsletterimg {
+  margin-top: 5px;
+  height: 100px;
+  width: 200px;
+  border: 10px solid transparent;
+}
+
+#newsletterimg:hover {
+  box-shadow: 0 0 10px 3px white;
+  border: 3px solid white;
+}
+
+.newsletter-content-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.newsletter-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-text {
+  color: white;
+}
+
+#news-text-01 {
+  font-family: "Playwrite US Trad", cursive;
+  font-weight: 50;
+  font-size: 15px;
+  color: silver;
+}
+
+#news-text-02 {
+  color: white;
+  font-family: "Playwrite US Trad", cursive;
+  font-size: 20px;
+}
+
+.newsbutton {
+  width: auto;
+}
+
+.newsbutton img {
+  margin-top: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.news-button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-button img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-button:hover img {
+  transform: scale(1.1) rotate(-45deg);
+}
+
+.news-button img:hover {
+  animation: tiltBack 0.5s forwards;
+}
+
+.herosection-03 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-element-02 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  padding: 0px 0;
+  padding-bottom: 40px;
+  margin-top: 25px;
+  padding-top: 50px;
+  flex-wrap: wrap;
+}
+
+.github,
+.linkedin {
+  margin-top: 14px;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, rgb(56, 55, 55), rgb(27, 25, 25), #171717, black);
+  border: 1px solid rgb(86, 85, 85);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 15px;
+  padding: 20px 20px;
+  cursor: pointer;
+  height: auto;
+}
+
+.github:hover,
+.linkedin:hover {
+  box-shadow: 0 0 5px 0.5px rgb(152, 149, 149);
+}
+
+#githubimage {
+  margin-top: 5px;
+  height: 90px;
+  width: 90px;
+  margin-bottom: 10px;
+  border: 5px solid transparent;
+  background-color: white;
+  border-radius: 100%;
+}
+
+#githubimage:hover,.github:hover,.linkedin:hover,.newsletter:hover
+,.about:hover,.project:hover {
+  box-shadow: 0 0 5px 3px silver;
+  border: 3px solid white;
+}
+
+.github-content-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+#github-text-01 {
+  font-family: "Playwrite US Trad", cursive;
+  font-weight: 50;
+  font-size: 15px;
+  color: silver;
+}
+
+#github-text-02 {
+  color: white;
+  font-family: "Playwrite US Trad", cursive;
+  font-size: 20px;
+}
+
+.github-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.github-text {
+  color: white;
+}
+
+.gitbutton {
+  width: auto;
+}
+
+.gitbutton img {
+  margin-top: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.git-button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.git-button img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.git-button:hover img {
+  transform: scale(1.1) rotate(-45deg);
+}
+
+.git-button img:hover {
+  animation: tiltBack 0.5s forwards;
+}
+
+.herosection-03 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 45px;
+  margin-right: 45px;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-element-02 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+  background-color: black;
+  padding: 0px 0;
+  padding-bottom: 80px;
+  padding-top: 30px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .hero,
+  .marquee-box,
+  .about,
+  .project,
+  .newsletter,
+  .github,
+  .linkedin {
+    width: 100%;
+  }
+
+  .hero {
+    width: 75%;
+    padding: 15px 10px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .herotext,
+  .marquee,
+  .about-text,
+  .project-text,
+  .newsletter-text,
+  .github-text,
+  .linkedin-text {
+    font-size: small;
+    justify-content: center;
+    text-align: center;
+  }
+  #desig{
+    font-size: 10px;
+    width: 100px;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nextbutton{
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .heroimg,
+  #myphoto,
+  #aboutimg,
+  #projectimg,
+  #newsletterimg,
+  #githubimage,
+  #linkedinimage {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .herosection-03,
+  .about-project-container {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
